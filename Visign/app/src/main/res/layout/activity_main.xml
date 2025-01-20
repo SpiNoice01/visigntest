@@ -6,15 +6,95 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:contentDescription="logotransparent"
+            android:src="@drawable/logo2"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15sp"
+                android:text="Komunikasi Tanpa Batas untuk Teman Tuli."
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&quot;Solusi Cerdas untuk Komunikasi Visual.&quot;"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!-- Tombol SOS dan Tidak Ada Masalah -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="24dp">
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/welcome_to_visign"
         android:textSize="24sp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/sos_button"
+        android:layout_width="78dp"
+        android:layout_height="79dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/black"
+
+        android:text="SOS"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="158dp" />
+
+    <Button
+        android:id="@+id/no_problem_button"
+        android:layout_width="171dp"
+        android:layout_height="80dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/green"
+        android:text="Tidak Ada Masalah"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="158dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
