@@ -14,5 +14,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, PlayActivity::class.java)
             startActivity(intent)
         }
+        findViewById<View>(R.id.tomboltranslate).setOnClickListener {
+            val intent = Intent(this, TranslateActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
