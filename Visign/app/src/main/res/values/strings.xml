@@ -2,4 +2,8 @@
     <string name="app_name">Visign</string>
     <string name="logovisign">logoVisign</string>
     <string name="welcome_to_visign">Welcome to Visign!</string>
+    <string name="sos">SOS</string>
+    <string name="tidak_ada_masalah">Tidak Ada Masalah</string>
+    <string name="gamepict">gamepict</string>
+    <string name="translatorpict">translatorpict</string>
 </resources>

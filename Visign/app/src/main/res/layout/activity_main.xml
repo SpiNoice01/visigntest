@@ -6,13 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Tombol SOS dan Tidak Ada Masalah -->
+
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:orientation="horizontal"
         android:padding="24dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -48,53 +52,113 @@
                 android:textSize="12sp"
                 tools:ignore="HardcodedText" />
         </LinearLayout>
-
-
     </LinearLayout>
 
-    <!-- Tombol SOS dan Tidak Ada Masalah -->
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginBottom="24dp">
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/main"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/welcome_to_visign"
-        android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@id/header"
+        android:id="@+id/body"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:layout_marginTop="128dp"
+        android:layout_marginBottom="87dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
 
-    <Button
-        android:id="@+id/sos_button"
-        android:layout_width="78dp"
-        android:layout_height="79dp"
-        android:layout_weight="1"
-        android:backgroundTint="@color/black"
+        <LinearLayout
+            android:id="@+id/sos_warning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
 
-        android:text="SOS"
-        android:textColor="@color/white"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="158dp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sos_button"
+                android:layout_width="0dp"
+                android:layout_height="59dp"
+                android:layout_weight="1"
+                android:text="@string/sos"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:backgroundTint="@color/colorError"
+                app:cornerRadius="8dp"
+                app:icon="@android:drawable/stat_sys_warning"
+                app:iconPadding="8dp"
+                app:rippleColor="@color/colorRipple"
+                app:strokeColor="@color/colorStroke" />
 
-    <Button
-        android:id="@+id/no_problem_button"
-        android:layout_width="171dp"
-        android:layout_height="80dp"
-        android:layout_weight="1"
-        android:backgroundTint="@color/green"
-        android:text="Tidak Ada Masalah"
-        android:textColor="@color/white"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="158dp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/no_problem_button"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/tidak_ada_masalah"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:backgroundTint="@color/colorPrimary"
+                app:cornerRadius="8dp"
+                app:rippleColor="@color/colorRipple"
+                app:strokeColor="@color/colorStroke" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageViewGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/gamepict"
+            app:layout_constraintDimensionRatio="H,2:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sos_warning"
+            app:srcCompat="@drawable/ngapakspict" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonmain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Mainkan"
+            android:textColor="#007E6B"
+            app:backgroundTint="#00FFFFFF"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewGame"
+            app:strokeColor="#007E6B"
+            app:strokeWidth="1dp" />
+
+        <ImageView
+            android:id="@+id/imageViewTranslator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/translatorpict"
+            app:layout_constraintDimensionRatio="H,2:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonmain"
+            app:srcCompat="@drawable/translatorpict" />
+
+        <Button
+            android:id="@+id/tomboltranslate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Translate"
+            android:textColor="#007E6B"
+            app:backgroundTint="#00FFFFFF"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewGame"
+            app:strokeColor="#007E6B"
+            app:strokeWidth="1dp"/>
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

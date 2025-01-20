@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red_grayish" />
+    <color name="colorError">#E55353</color>
+    <color name="colorPrimary">#75908B</color>
+    <color name="colorRipple">#B1A9A9</color>
+    <color name="colorStroke">#755C5C</color>
+
 </resources>
